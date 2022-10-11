@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Spring Operations</title>
+    <link rel="stylesheet" href="Style.css">
+
+    <!--JAVASCRIPT CODE-->
+    <script type="text/javascript">
+
+        //Leftmost vowel in the string
+        function str_vowel() {
+            var chr = "";
+            var str = prompt("Enter the string\n", " ");
+            if (str == " " || str == null) {
+                window.alert("Enter String");
+                return false;
+            }
+            
+            for (var i = 0; i < str.length; i++) {
+            chr = str.charAt(i);
+             if (chr == 'a' || chr == 'e' || chr == 'i' || chr == 'o' || chr == 'u' || chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U')
+                break; }
+            if (i < str.length)
+            document.getElementById("display").innerHTML = "String: " + str;
+            document.getElementById("result").innerHTML = "Leftmost vowel : " + chr;
+            pos=i+1;
+            document.getElementById("ab").innerHTML = "Position: " + pos;
+
+        }
+        //Reverse the string
+        function reverse() {
+            var str2 = prompt("Enter the string\n", " ");
+            if (str2 == " " || str2 == null) {
+                window.alert("Enter String");
+                return false;
+            }
+            let reverseResult = "";
+            for (var i = str2.length - 1; i >= 0; i--) {
+                document.getElementById("display").innerHTML = "Original String: " + str2;
+                reverseResult = reverseResult + str2[i];
+                document.getElementById("result").innerHTML = "Reversed String: " + reverseResult;
+            }
+        }
+
+        //Concatenation
+        function concatenate() {
+            var str3 = prompt("Enter string 1:\n", "");
+            var str4 = prompt("Enter string 2:\n", "");
+
+            if ((str3 == " " || str3 == null) && (str4 == " " || str4 == null)) {
+                window.alert("Enter String");
+                return false;
+            }
+            str5 = str3 + str4;
+            document.getElementById("display").innerHTML = "String 1: " + str3;
+            document.getElementById("result").innerHTML = "String 2: " + str4;
+            document.getElementById("ab").innerHTML = "Concatenated String: " + str5;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box">
+
+        <h3 align="center">String Operations</h3>
+        <form>
+            <input id="btn" type="button" value="1] Position of the leftmost vowel" onclick="str_vowel()" /><br><br>
+            <input id="btn" type="button" value="2] Reverse a String" onclick="reverse()" /><br><br>
+            <input id="btn" type="button" value="3] Concatenation" onclick="concatenate()" /><br><br>
+
+
+            <p id="display">Click on operation you want to perform! </p>
+            <p id="result">Answer will display here...</p>
+            <p id="ab"> </p>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
