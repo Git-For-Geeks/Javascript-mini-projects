@@ -2,10 +2,11 @@
     margin:0px;
     padding: 0px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body{
-    background-color: aqua;
+    background-color: #A66CFF;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -16,8 +17,8 @@ body{
     justify-content: center;
     display: grid;
     position: absolute;
-    top: 10%;
-    background-color: white;
+    top: 0%;
+    background-color: #B1E1FF;
     width: 80vw;
     max-width: 37.5em;
     border-radius: 0.62em;
@@ -25,7 +26,6 @@ body{
 }
 
 .search-wrapper{
-    
     margin-top: 20%;
 }
 
@@ -47,7 +47,7 @@ body{
 }
 .btn:hover{
     background-color: red;
-
+    cursor: pointer;
     border: none;
 }
 

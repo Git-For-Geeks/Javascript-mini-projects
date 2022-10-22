@@ -1,3 +1,5 @@
+console.log("This is the brain of Web D")
+
 let input=document.getElementsByClassName("inp")[0];
 let submit_btn=document.getElementsByClassName("btn")[0];
 let res=document.getElementsByClassName("info")[0];
@@ -12,8 +14,6 @@ function search(){
     .then((response) => response.json())
     .then((data) => {
         let d=data[0];
-        console.log(data[0]);
-        
             res.innerHTML=`
             <div class="info">
             <div class="img-div">
@@ -27,9 +27,15 @@ function search(){
             - ${Object.keys(d.currencies)[0]}
             </span></h4>
             <h4>population : <span>${d.population}</span></h4>
+            <h4>Capital : <span>${d.capital[0]}</span></h4>
+            <h4>Border Country Code : <span>${d.borders.join(', ')}</span></h4>
+            <h4>Time Zones : <span>${d.timezones.join(', ')}</span></h4>
+            <h4>Languages : <span>${Object.values(data[0].languages).toString().split(",").join(", ")}</span></h4>
             </div>
+            
             `
         }
+
         )
         .catch(() =>{
             res.style.fontWeight="100";
@@ -42,3 +48,4 @@ function search(){
             }    
         });
 }
+
