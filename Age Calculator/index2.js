@@ -1,0 +1,23 @@
+function age() {
+    var date1 = document.getElementById("date").value;
+    var month1 = document.getElementById("month").value;
+    var year1 = document.getElementById("year").value;
+    var date = new Date(); //js method to create a new date object with the current date and time
+    var date2 = date.getDate(); //method to get the day as a number (1-31)
+    var month2 = 1 + date.getMonth(); //method to get the month as a number (0-11) so adding 1
+    var year2 = date.getFullYear();  //method to get the year as a four digit number (yyyy)
+    var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    //code to calculate age
+    if (date1 > date2) {
+        date2 = date2 + month[month2 - 1];
+        month2 = month2 - 1;
+    }
+    if (month1 > month2) {
+        month2 = month2 + 12;
+        year2 = year2 - 1;
+    }
+    var d = date2 - date1;
+    var m = month2 - month1;
+    var y = year2 - year1;
+    document.getElementById("age").innerHTML =  "Your Age is " + y + " Years " + m + " Months " + d + " Days !!";
+}

@@ -1,0 +1,122 @@
+
+
+
+* {
+	box-sizing: border-box;
+}
+body{
+	background: linear-gradient(#C47AFF,#7978FF,#4649FF,#1D1CE5);
+   /*background: linear-gradient(#FFF5E4,#FFE3E1,#FFD1D1,#FF9494);*/
+   font-family: sans-serif;
+
+
+}
+.heading{
+	text-align: center;
+	font-family: sans-serif;
+	color: white;
+	font-size: small;
+}
+.box{
+	width:520px;
+	height: auto;
+    min-height:100px;
+	margin: 100px auto;
+	background-color:black;
+	border-radius: 0.62em;
+}
+.top{
+    width: 100%;
+    margin: 0;
+	border-radius: 0.62em;
+    overflow: hidden;
+    display: block;
+    float: none;
+	
+}
+.top h4{
+	font-size: 26px;
+	text-align: center;
+	font-family: sans-serif;
+	font-weight: normal;
+    margin-top: 0px;
+    box-shadow: 0px 2px #bababa;
+    background: white;
+    font-size: 34px;
+	color: black;
+}
+.block{
+	width: 135px;
+	padding: 5px 20px; 
+	margin-left: 20px;
+	display: inline-block;
+	float: left;
+}
+ 
+.title{
+	font-size: 20px;
+	text-align: left;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 0.5;
+	letter-spacing: 0.5px;
+	word-spacing: 2.7px;
+	color: white;
+}
+
+input[type=text] {
+	box-shadow: 2px 2px 10px white;
+	width: 140px;
+	margin: auto;
+	outline: none;
+        min-height: 50px;
+	/* border: 2px solid #1073d0; */
+	border:none;
+	padding: 12px;
+	background-color: #f7f7f7;
+        border-radius: 2px;
+        color: #1073d0;
+        font-size: 17px;
+}
+
+input[type=text]:focus{
+	background: #ffffff;
+	border: 2px solid #FF8787;
+	outline: none;
+
+
+}
+
+input[type=button]{
+	width: 150px;
+	margin-left: 35%;
+        margin-top: 40px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	background-color: #FF8787;
+	color: #ffffff;
+	padding: 14px 16px;
+	text-align: center;
+  
+	font-size: 16px;
+}
+input[type=button]:hover{
+	background-color: #FF5858;
+	
+}
+
+#age{
+	display: block;
+	margin: 10px;
+        margin-top: 35px;
+	padding: 10px;
+        padding-bottom: 20px;
+	overflow: hidden;
+	font-family: verdana;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.5;
+	word-spacing: 2.7px;
+	color: white;
+}
