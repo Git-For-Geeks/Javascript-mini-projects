@@ -1,0 +1,12 @@
+body{
+    background-image: linear-gradient(to right, rgb(255,255,255), rgb(255,255,255));
+}
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+#Click{
+    font-size: 25px;
+}
