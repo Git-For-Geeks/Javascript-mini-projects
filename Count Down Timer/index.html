@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Srushti</title>
+
+    <style>
+       
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: red;
+            font-family: cursive;
+            font-size: 40px;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        #containerInput {
+            margin: 10% 25%;
+            width: 50%;
+        }
+
+        #containerResult {
+            width: 50%;
+            font: larger;
+            font-family: fantasy;
+            font-size: 150px;
+            margin-left: 50%;
+        }
+
+        input {
+            margin-left: 35%;
+            width: 20%;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body bgcolor="#E7B3FF  ">
+    <h1>Countdown Timer</h1>
+    <div id="containerInput">
+        <input id="text" placeholder="Enter Number" type="number">
+        <button onclick="check()">Calculate</button>
+    </div>
+    <div id="containerResult">
+        <span id="result"></span>
+    </div>
+    <script>
+        function check() {
+            let counter = document.getElementById('text').value;
+            let timer = setInterval(function () {
+                counter--;
+                if (counter === 0) {
+                    clearInterval(timer);
+                }
+                document.getElementById("result").innerHTML = counter;
+
+            }, 1000)
+        }
+    </script>
+</body>
+
+</html>
